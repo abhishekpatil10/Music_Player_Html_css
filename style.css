@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.main-body {
+  background-image: linear-gradient(to bottom, black, white, black);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.main-body .navbar {
+  width: 100vw;
+  display: inline-flex;
+  justify-content: space-around;
+  background: rgba(255, 255, 255, 0.5);
+  height: 20vh;
+  margin-bottom: 2em;
+}
+
+.navbar .logo {
+  height: fit-content;
+  margin-top: 1em;
+}
+.navbar .links #bars {
+  font-size: 30px;
+  margin-top: 1em;
+  margin-left: auto;
+  margin-right: 1em;
+  display: none;
+}
+.navbar .links {
+  width: fit-content;
+  height: fit-content;
+  margin-top: 1em;
+}
+.navbar .listen {
+  margin-top: 1em;
+}
+.navbar .links ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+.navbar .links ul a {
+  margin: 2em;
+  text-decoration: none;
+  font-size: 22px;
+  color: white;
+  font-weight: bold;
+}
+
+.navbar .links ul a:hover {
+  color: black;
+  border-bottom: 2px solid black;
+}
+
+.navbar .listen img {
+  width: 6em;
+  margin-top: 0.5em;
+}
+
+.song-card {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  align-items: center;
+  justify-content: space-around;
+}
+.song-card .first-song {
+  display: grid;
+  align-self: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.5);
+  width: 20em;
+  height: 20em;
+  padding-top: 2em;
+  margin-bottom: 4em;
+  border-radius: 0.5em;
+}
+
+.first-song img {
+  background: black;
+  margin-left: 50%;
+  transform: translate(-50%);
+}
+
+.first-song audio {
+  margin-left: 50%;
+  transform: translate(-50%);
+}
+
+.footer {
+  display: inline-flex;
+  justify-content: space-around;
+  width: 100vw;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 2em;
+}
+
+.footer .listen img {
+  width: 8em;
+}
+.footer .mid h2 {
+  text-align: center;
+  color: black;
+  font-size: xx-large;
+}
+.footer .mid a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer .mid h3 {
+  background: #000;
+  padding: 1em;
+  text-align: center;
+  margin: 1em;
+  border-radius: 0.5em;
+  margin-top: 2em;
+}
+.footer .mid h3:hover {
+  background: white;
+  color: black;
+}
+.mid .mid-links {
+  display: inline-flex;
+  justify-content: space-between;
+}
+
+.listen h4 {
+  text-align: center;
+}
+
+@media screen and (max-width: 500px) {
+  .navbar .links #bars {
+    display: block;
+    margin-right: 2em;
+  }
+  .listen {
+    display: none;
+  }
+  .navbar .logo {
+    margin-left: 1em;
+    height: 20vh;
+    width: 35em;
+  }
+  .logo img {
+    width: 10em;
+  }
+  .navbar .links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .main-body .song-card {
+    display: grid;
+    grid-template-columns: auto;
+    align-items: center;
+  }
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .footer .mid-links {
+    display: flex;
+    flex-direction: column;
+  }
+}
